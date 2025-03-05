@@ -16,7 +16,7 @@ export default function NewspaperStyle() {
   const [seconds, setSeconds] = useState(0)
 
   // Set wedding date - example: June 15, 2025
-  const weddingDate = new Date("2025-06-15T16:00:00")
+  const weddingDate = new Date("2025-04-05T18:00:00")
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -39,9 +39,9 @@ export default function NewspaperStyle() {
 
   const handleAddToCalendar = () => {
     const event = {
-      title: "John & Jane's Wedding",
-      description: "We're getting married! Join us for our special day.",
-      location: "123 Wedding Venue, City",
+      title: "Boda de Mehyli & Miguel",
+      description: "¡Nos casamos! Unete a este día tan especial.",
+      location: "detras de taller chile Verde, callejon toco, Medellín y Madero, 1ra. Secc, 86270 Tab.",
       startTime: weddingDate.toISOString(),
       endTime: new Date(weddingDate.getTime() + 6 * 60 * 60 * 1000).toISOString(), // 6 hours event
     }
@@ -52,8 +52,8 @@ export default function NewspaperStyle() {
   }
 
   const handleWhatsAppConfirmation = () => {
-    const message = encodeURIComponent("Hello! I'd like to confirm my attendance to your wedding.")
-    window.open(`https://wa.me/1234567890?text=${message}`, "_blank")
+    const message = encodeURIComponent("Hola! Me gustaría confirmar mi asistencia a la boda.")
+    window.open(`https://wa.me/9931727567?text=${message}`, "_blank")
   }
 
   return (
@@ -67,12 +67,12 @@ export default function NewspaperStyle() {
         <div className="md:col-span-2">
           <Card className="border-2 border-black">
             <CardHeader className="border-b border-black">
-              <CardTitle className="text-4xl font-bold text-center">JOHN & JANE</CardTitle>
+              <CardTitle className="text-4xl font-bold text-center">Mehyli & Miguel</CardTitle>
               <CardDescription className="text-center text-lg">ARE GETTING MARRIED</CardDescription>
             </CardHeader>
             <CardContent className="pt-6">
               <div className="aspect-video relative mb-6">
-                <Image src="/placeholder.svg?height=400&width=600" alt="John and Jane" fill className="object-cover" />
+                <Image src="/placeholder.svg?height=400&width=600" alt="Mehyli and Miguel" fill className="object-cover" />
               </div>
               <p className="text-lg leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum
