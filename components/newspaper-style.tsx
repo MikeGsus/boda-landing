@@ -4,10 +4,8 @@ import { useState, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
-import { Calendar } from "@/components/ui/calendar"
 import { MapPin, Gift, CalendarIcon, Send } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+// import Image from "next/image"
 
 export default function NewspaperStyle() {
   const [days, setDays] = useState(0)
