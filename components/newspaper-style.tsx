@@ -18,6 +18,14 @@ export default function NewspaperStyle() {
   // Set wedding date - example: June 15, 2025
   const weddingDate = new Date("2025-04-05T18:00:00")
 
+  const event = {
+    title: "Boda de Mehyli & Miguel",
+    description: "¡Nos casamos! Unete a este día tan especial.",
+    location: "Palapa Villa Fakeli, callejon toco, Medellín y Madero, 1ra. Secc.",
+    startTime: weddingDate.toISOString(),
+    endTime: new Date(weddingDate.getTime() + 6 * 60 * 60 * 1000).toISOString(), // 6 hours event
+  }
+
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date()
@@ -38,21 +46,12 @@ export default function NewspaperStyle() {
   }, [weddingDate])
 
   const handleAddToCalendar = () => {
-    const event = {
-      title: "Boda de Mehyli & Miguel",
-      description: "¡Nos casamos! Unete a este día tan especial.",
-      location: "detras de taller chile Verde, callejon toco, Medellín y Madero, 1ra. Secc, 86270 Tab.",
-      startTime: weddingDate.toISOString(),
-      endTime: new Date(weddingDate.getTime() + 6 * 60 * 60 * 1000).toISOString(), // 6 hours event
-    }
-
     const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${event.startTime.replace(/[-:]/g, "").replace(".000", "")}/${event.endTime.replace(/[-:]/g, "").replace(".000", "")}&details=${encodeURIComponent(event.description)}&location=${encodeURIComponent(event.location)}&sf=true&output=xml`
-
     window.open(googleCalendarUrl, "_blank")
   }
 
-  const handleWhatsAppConfirmation = () => {
-    const message = encodeURIComponent("Hola! Me gustaría confirmar mi asistencia a la boda.")
+  const handleWhatsAppConfirmation = (assit: boolean) => {
+    const message = assit ? encodeURIComponent("Hola! Me gustaría confirmar mi asistencia a la boda.") : encodeURIComponent("Hola! Lamentablemente no podré asistir a la boda.")
     window.open(`https://wa.me/9931727567?text=${message}`, "_blank")
   }
 
@@ -71,9 +70,9 @@ export default function NewspaperStyle() {
               <CardDescription className="text-center text-lg">ARE GETTING MARRIED</CardDescription>
             </CardHeader>
             <CardContent className="pt-6">
-              <div className="aspect-video relative mb-6">
+              {/* <div className="aspect-video relative mb-6">
                 <Image src="/placeholder.svg?height=400&width=600" alt="Mehyli and Miguel" fill className="object-cover" />
-              </div>
+              </div> */}
               <p className="text-lg leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum
                 vestibulum. Cras porttitor metus in nibh finibus, a volutpat felis placerat. Aenean eu enim justo.
@@ -115,7 +114,7 @@ export default function NewspaperStyle() {
               <CardTitle className="text-2xl font-bold">SAVE THE DATE</CardTitle>
             </CardHeader>
             <CardContent className="pt-6">
-              <Calendar mode="single" selected={weddingDate} className="mx-auto" />
+            <div className="text-3xl font-bold">05-Abril-2025</div>
               <Button onClick={handleAddToCalendar} className="w-full mt-4 bg-black text-white hover:bg-gray-800">
                 <CalendarIcon className="mr-2 h-4 w-4" /> Add to Calendar
               </Button>
@@ -135,10 +134,8 @@ export default function NewspaperStyle() {
                 <MapPin className="h-5 w-5 mr-2 mt-0.5" />
                 <div>
                   <h3 className="font-bold">Location</h3>
-                  <p>123 Wedding Venue, City</p>
-                  <Link href="https://maps.google.com" target="_blank" className="text-sm underline">
-                    View on Google Maps
-                  </Link>
+                  <p>{event.location}</p>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3792.048759848387!2d-92.8555268251544!3d18.115539381421705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ee7540f2801ebd%3A0x3d071d9fc48600eb!2sVilla%20FAKELI!5e0!3m2!1ses-419!2smx!4v1741153793332!5m2!1ses-419!2smx" width="300" height="150" loading="lazy"></iframe>
                 </div>
               </div>
 
@@ -154,11 +151,16 @@ export default function NewspaperStyle() {
               <div className="flex items-start">
                 <Send className="h-5 w-5 mr-2 mt-0.5" />
                 <div>
-                  <h3 className="font-bold">RSVP</h3>
-                  <p>Please confirm your attendance</p>
-                  <Button onClick={handleWhatsAppConfirmation} className="mt-2 bg-black text-white hover:bg-gray-800">
-                    Confirm via WhatsApp
-                  </Button>
+                  <h3 className="font-bold">Confirmación</h3>
+                  <p>Por favor, confirma tu asistencia</p>
+                  <div className="flex flex-row justify-between">
+                    <Button onClick={() => handleWhatsAppConfirmation(true)} className="mt-2 bg-black text-white hover:bg-gray-800">
+                      Confirmo
+                    </Button>
+                    <Button onClick={() => handleWhatsAppConfirmation(false)} className="mt-2 bg-white text-black hover:bg-gray-100">
+                      No podré asistir
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
