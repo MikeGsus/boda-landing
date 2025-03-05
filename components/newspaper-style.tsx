@@ -220,7 +220,7 @@ export default function NewspaperStyle() {
       </div>
 
       <div className="mt-8 text-center">
-        <p className="italic">"Two souls with but a single thought, two hearts that beat as one."</p>
+        <p className="italic">{'"Two souls with but a single thought, two hearts that beat as one."'}</p>
         <p className="mt-4">We look forward to celebrating with you!</p>
       </div>
     </div>
