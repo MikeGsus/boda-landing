@@ -76,7 +76,7 @@ export default function NewspaperStyle() {
             </CardHeader>
             <CardContent className="pt-6">
               <div className="aspect-video relative mb-6">
-                <img src="/img/_MG_6458.jpg?height=400&width=600" alt="Mehyli & Miguel" className="object-cover" />
+                <img src="/img/_MG_6385.jpg?height=400&width=600" alt="Mehyli & Miguel" className="object-cover" />
               </div>
               <p className="text-lg leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum
@@ -141,7 +141,6 @@ export default function NewspaperStyle() {
                   <h3 className="font-bold">Ubicación</h3>
                   <p>{event.location}</p>
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3795.33443513798!2d-93.00485662515764!3d17.96317098596361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85edd6922930cf45%3A0x4da022f29b9211ef!2sGran%20Salon%20Versalles!5e0!3m2!1ses-419!2smx!4v1741240469833!5m2!1ses-419!2smx"
-                    className="grayscale"
                     width="300"
                     height="150"
                     loading="lazy"
