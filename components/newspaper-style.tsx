@@ -48,8 +48,8 @@ export default function NewspaperStyle() {
   }
 
   const handleWhatsAppConfirmation = (assit: boolean) => {
-    const message = assit ? encodeURIComponent("Hola! Me gustaría confirmar mi asistencia a la boda.") : encodeURIComponent("Hola! Lamentablemente no podré asistir a la boda.")
-    window.open(`https://wa.me/9931727567?text=${message}`, "_blank")
+    const message = assit ? encodeURIComponent("Hola! Soy [   ], me gustaría confirmar mi asistencia a la boda.") : encodeURIComponent("Hola! Soy [   ], lamentablemente no podré asistir a la boda.")
+    window.open(`https://wa.me/9931660995?text=${message}`, "_blank")
   }
 
   const handleCopyToClipboard = () => {
