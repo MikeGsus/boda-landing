@@ -74,14 +74,19 @@ export default function NewspaperStyle() {
               <CardTitle className="text-4xl font-bold text-center">Mehyli & Miguel</CardTitle>
               <CardDescription className="text-center text-lg">¡NOS CASAMOS!</CardDescription>
             </CardHeader>
-            <CardContent className="pt-6">
+            <CardContent className="pt-6 text-justify">
               <div className="aspect-video relative mb-6">
                 <img src="/img/_MG_6385.jpg?height=400&width=600" alt="Mehyli & Miguel" className="object-cover" />
               </div>
+              <div className="text-lg italic text-center my-10">
+                <q>Ahora, Señor, yo no me caso con esta mujer por lujuria, sino con elevados sentimientos. Ten misericordia de los dos, y haz que vivamos larga vida</q>
+                <p className="text-right mt-1">- Tobias 8,7</p>
+              </div>
               <p className="text-lg leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum
-                vestibulum. Cras porttitor metus in nibh finibus, a volutpat felis placerat. Aenean eu enim justo.
-                Vestibulum aliquam hendrerit molestie.
+                Hace siete años comenzamos a escribir nuestra historia juntos. Ha sido un tiempo lleno de aventuras y grandes emociones. Hoy queremos compartir con ustedes el siguiente capítulo de nuestra vida.
+              </p>
+              <p className="text-lg leading-relaxed mt-4">
+                Nos gustaría invitarlos a celebrar con nosotros este día tan especial, en el que uniremos nuestras vidas en matrimonio.
               </p>
             </CardContent>
           </Card>
