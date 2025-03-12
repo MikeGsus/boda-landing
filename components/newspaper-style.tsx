@@ -52,11 +52,11 @@ export default function NewspaperStyle() {
     window.open(`https://wa.me/9933117715?text=${message}`, "_blank")
   }
 
-  const handleCopyToClipboard = () => {
-    navigator.clipboard.writeText("51625111").then(() => {
-      alert("Número de Evento copiado")
+  const handleCopyToClipboard = (txt: string) => {
+    navigator.clipboard.writeText(txt).then(() => {
+      alert("Copiado")
     }).catch(err => {
-      console.error("Falló al copiar el Número de Evento: ", err)
+      console.error("Falló al copiar: ", err)
     })
   }
 
@@ -78,7 +78,7 @@ export default function NewspaperStyle() {
               <CardTitle className="text-4xl font-bold text-center">Mehyli & Miguel</CardTitle>
               <CardDescription className="text-center text-lg text-black">¡NOS CASAMOS!</CardDescription>
             </CardHeader>
-            <CardContent className="pt-6 text-justify">
+            <CardContent className="pt-6 md:pb-16 text-justify">
               <div className="aspect-video relative mb-6">
                 <img src="/img/_MG_6385.jpg?height=400&width=600" alt="Mehyli & Miguel" className="object-cover" />
               </div>
@@ -143,14 +143,15 @@ export default function NewspaperStyle() {
           <Card className="border-2 border-black">
             <CardHeader className="border-b border-black">
               <CardTitle className="text-2xl font-bold">MESA DE REGALOS</CardTitle>
+              <CardDescription className="text-center text-sm text-black">Su presencia es el mejor presente. Sin embargo, hemos elegido estás opciones de regalo que nos gustaría recibir.</CardDescription>
             </CardHeader>
-            <CardContent className="pt-6">
+            <CardContent className="pt-4">
             <p className="text-xl font-bold">Liverpool</p>
             <p>Número de Evento: 
               <Button onClick={() => window.open('https://mesaderegalos.liverpool.com.mx/milistaderegalos/51625111')} className="bg-[#e1e1dd] ml-1 text-black border-black rounded-sm hover:bg-[#d5d5cf]">
                 51625111 <SquareArrowOutUpRight className="h-4" />
               </Button>
-              <Button onClick={handleCopyToClipboard} className="bg-[#e1e1dd] text-black border-black rounded-sm hover:bg-[#d5d5cf]">
+              <Button onClick={() => handleCopyToClipboard('51625111')} className="bg-[#e1e1dd] text-black border-black rounded-sm hover:bg-[#d5d5cf]">
                 Copiar <Clipboard className="h-4" />
               </Button>
             </p>
@@ -159,6 +160,14 @@ export default function NewspaperStyle() {
               <Button onClick={() => window.open('https://www.amazon.com.mx/wedding/registry/36O9G85OIP5FN')} className="bg-[#e1e1dd] ml-1 text-black border-black rounded-sm hover:bg-[#d5d5cf]">
                 Presione aquí <SquareArrowOutUpRight className="h-4" />
               </Button>
+            </p>
+            <p className="text-xl font-bold mt-2">Cuenta para depositos</p>
+            <p>
+              BBVA <br />
+              <Button onClick={() => handleCopyToClipboard('4152313871712480')} className="bg-[#e1e1dd] text-black border-black rounded-sm hover:bg-[#d5d5cf]">
+                4152 3138 7171 2480 <Clipboard className="h-4" />
+              </Button>
+              Cinthia Mehyli Ortiz Morales
             </p>
             </CardContent>
           </Card>
