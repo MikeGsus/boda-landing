@@ -48,8 +48,8 @@ export default function NewspaperStyle() {
   }
 
   const handleWhatsAppConfirmation = (assit: boolean) => {
-    const message = assit ? encodeURIComponent("Hola! Soy [   ], me gustaría confirmar mi asistencia a la boda.") : encodeURIComponent("Hola! Soy [   ], lamentablemente no podré asistir a la boda.")
-    window.open(`https://wa.me/9931660995?text=${message}`, "_blank")
+    const message = assit ? encodeURIComponent("Hola! Confirmo mi asistencia a la Boda de Mehyli y Miguel, mi nombre es [   ].") : encodeURIComponent("Hola! Soy [   ], lamentablemente no podré asistir a la boda.")
+    window.open(`https://wa.me/9933117715?text=${message}`, "_blank")
   }
 
   const handleCopyToClipboard = () => {
@@ -76,15 +76,15 @@ export default function NewspaperStyle() {
           <Card className="border-2 border-black">
             <CardHeader className="border-b border-black">
               <CardTitle className="text-4xl font-bold text-center">Mehyli & Miguel</CardTitle>
-              <CardDescription className="text-center text-lg">¡NOS CASAMOS!</CardDescription>
+              <CardDescription className="text-center text-lg text-black">¡NOS CASAMOS!</CardDescription>
             </CardHeader>
             <CardContent className="pt-6 text-justify">
               <div className="aspect-video relative mb-6">
                 <img src="/img/_MG_6385.jpg?height=400&width=600" alt="Mehyli & Miguel" className="object-cover" />
               </div>
               <div className="text-lg italic text-center my-10">
-                <q>Ahora, Señor, yo no me caso con esta mujer por lujuria, sino con elevados sentimientos. Ten misericordia de los dos, y haz que vivamos larga vida</q>
-                <p className="text-right mt-1">- Tobias 8,7</p>
+                <q>Ahora, Señor, no he buscado placer al casarme con esta mujer, lo hago con un corazón sincero. Ten piedad de ella y de mí y llévamos juntos a la vejez</q>
+                <p className="text-right mt-1">- cfr. Tobias 8,7</p>
               </div>
               <p className="text-lg leading-relaxed">
                 Hace siete años comenzamos a escribir nuestra historia juntos. Ha sido un tiempo lleno de aventuras y grandes emociones. Hoy queremos compartir con ustedes el siguiente capítulo de nuestra vida.
@@ -123,7 +123,7 @@ export default function NewspaperStyle() {
             </CardContent>
           </Card>
 
-          <Card className="border-2 border-black">
+          <Card className="border-2 border-black mb-6">
             <CardHeader className="border-b border-black">
               <CardTitle className="text-2xl font-bold">SAVE THE DATE</CardTitle>
             </CardHeader>
@@ -132,6 +132,26 @@ export default function NewspaperStyle() {
               <Button onClick={handleAddToCalendar} className="w-full mt-4 bg-black text-white hover:bg-gray-800">
                 <CalendarIcon className="mr-2 h-4 w-4" /> Añadir al Calendario
               </Button>
+            </CardContent>
+          </Card>
+          
+          <Card className="border-2 border-black">
+            <CardHeader className="border-b border-black">
+              <CardTitle className="text-2xl font-bold">MESA DE REGALOS</CardTitle>
+            </CardHeader>
+            <CardContent className="pt-6">
+            <p className="text-xl font-bold">Liverpool</p>
+            <p>Número de Evento: 
+              <Button onClick={handleCopyToClipboard} className="bg-[#e1e1dd] text-black border-black rounded-sm hover:bg-[#d5d5cf]">
+                51625111 <Clipboard className="h-4" />
+              </Button>
+            </p>
+            <p className="text-xl font-bold">Amazon</p>
+            <p>Número de Evento: 
+              <Button onClick={handleCopyToClipboard} className="bg-[#e1e1dd] text-black border-black rounded-sm hover:bg-[#d5d5cf]">
+                51625111 <Clipboard className="h-4" />
+              </Button>
+            </p>
             </CardContent>
           </Card>
         </div>
