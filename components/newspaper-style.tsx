@@ -62,9 +62,9 @@ export default function NewspaperStyle() {
 
   return (
     <div className="font-serif max-w-4xl mx-auto bg-white">
-      <div className="border-b-4 border-black py-6">
-        <h1 className="text-center text-6xl font-bold tracking-tighter">THE WEDDING TIMES</h1>
-        <p className="text-center text-xl mt-2">Edición Especial - 05 de ABRIL de 2025</p>
+      <h1 className="text-center text-6xl font-bold tracking-tighter">THE WEDDING TIMES</h1>
+      <div className="border-y-2 border-black mt-5">
+        <p className="text-center text-xl my-1">Villahermosa, Tabasco - Edición Especial - 05 de Abril de 2025</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
