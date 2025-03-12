@@ -3,8 +3,8 @@ import { useState, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
-import { MapPin, Gift, CalendarIcon, Send, Clipboard } from "lucide-react"
-// import Image from "next/image"
+import { MapPin, Gift, CalendarIcon, Send, Clipboard, SquareArrowOutUpRight } from "lucide-react"
+
 
 export default function NewspaperStyle() {
   const [days, setDays] = useState(0)
@@ -147,14 +147,17 @@ export default function NewspaperStyle() {
             <CardContent className="pt-6">
             <p className="text-xl font-bold">Liverpool</p>
             <p>Número de Evento: 
+              <Button onClick={() => window.open('https://mesaderegalos.liverpool.com.mx/milistaderegalos/51625111')} className="bg-[#e1e1dd] ml-1 text-black border-black rounded-sm hover:bg-[#d5d5cf]">
+                51625111 <SquareArrowOutUpRight className="h-4" />
+              </Button>
               <Button onClick={handleCopyToClipboard} className="bg-[#e1e1dd] text-black border-black rounded-sm hover:bg-[#d5d5cf]">
-                51625111 <Clipboard className="h-4" />
+                Copiar <Clipboard className="h-4" />
               </Button>
             </p>
-            <p className="text-xl font-bold">Amazon</p>
-            <p>Número de Evento: 
-              <Button onClick={handleCopyToClipboard} className="bg-[#e1e1dd] text-black border-black rounded-sm hover:bg-[#d5d5cf]">
-                51625111 <Clipboard className="h-4" />
+            <p className="text-xl font-bold mt-2">Amazon</p>
+            <p>Enlace:
+              <Button onClick={() => window.open('https://www.amazon.com.mx/wedding/registry/36O9G85OIP5FN')} className="bg-[#e1e1dd] ml-1 text-black border-black rounded-sm hover:bg-[#d5d5cf]">
+                Presione aquí <SquareArrowOutUpRight className="h-4" />
               </Button>
             </p>
             </CardContent>
