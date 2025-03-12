@@ -128,7 +128,12 @@ export default function NewspaperStyle() {
               <CardTitle className="text-2xl font-bold">SAVE THE DATE</CardTitle>
             </CardHeader>
             <CardContent className="pt-6">
-            <div className="text-3xl font-bold">05/Abril/2025</div>
+            <div className="text-3xl font-bold text-center md:hidden lg:block">05/Abril/2025</div>
+            <div className="text-3xl font-bold text-center hidden md:flex md:flex-col lg:hidden">
+              <span className="border-b-[1px] border-black mb-2 pb-2">05</span>
+              <span className="border-b-[1px] border-black mb-2 pb-2">Abril</span>
+              <span>2025</span>
+            </div>
               <Button onClick={handleAddToCalendar} className="w-full mt-4 bg-black text-white hover:bg-gray-800">
                 <CalendarIcon className="mr-2 h-4 w-4" /> Añadir al Calendario
               </Button>
