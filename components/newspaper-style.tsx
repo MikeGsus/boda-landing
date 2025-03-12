@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
-import { MapPin, Gift, CalendarIcon, Send, Clipboard, SquareArrowOutUpRight } from "lucide-react"
+import { MapPin, Gift, CalendarIcon, Send, Clipboard, SquareArrowOutUpRight, AlarmClock, ListCollapse, CalendarCheck } from "lucide-react"
 
 
 export default function NewspaperStyle() {
@@ -99,7 +99,9 @@ export default function NewspaperStyle() {
         <div>
           <Card className="border-2 border-black mb-6">
             <CardHeader className="border-b border-black">
-              <CardTitle className="text-2xl font-bold">Cuenta Regresiva</CardTitle>
+              <CardTitle className="text-2xl font-bold flex flex-row justify-evenly">
+                <AlarmClock className="h-8 w-8" />Cuenta Regresiva
+              </CardTitle>
             </CardHeader>
             <CardContent className="pt-6">
               <div className="grid grid-cols-4 gap-2 text-center">
@@ -125,7 +127,9 @@ export default function NewspaperStyle() {
 
           <Card className="border-2 border-black mb-6">
             <CardHeader className="border-b border-black">
-              <CardTitle className="text-2xl font-bold">SAVE THE DATE</CardTitle>
+              <CardTitle className="text-2xl font-bold flex flex-row justify-evenly">
+              <CalendarIcon className="h-8 w-8"/>  SAVE THE DATE
+              </CardTitle>
             </CardHeader>
             <CardContent className="pt-6">
             <div className="text-3xl font-bold text-center md:hidden lg:block">05/Abril/2025</div>
@@ -142,7 +146,9 @@ export default function NewspaperStyle() {
           
           <Card className="border-2 border-black">
             <CardHeader className="border-b border-black">
-              <CardTitle className="text-2xl font-bold">MESA DE REGALOS</CardTitle>
+              <CardTitle className="text-2xl font-bold flex flex-row justify-evenly">
+                <Gift className="h-8 w-8"/> MESA DE REGALOS
+              </CardTitle>
               <CardDescription className="text-center text-sm text-black">Su presencia es el mejor presente. Sin embargo, hemos elegido estás opciones de regalo que nos gustaría recibir.</CardDescription>
             </CardHeader>
             <CardContent className="pt-4">
@@ -177,7 +183,9 @@ export default function NewspaperStyle() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         <Card className="border-2 border-black">
           <CardHeader className="border-b border-black">
-            <CardTitle className="text-2xl font-bold">DETALLES DEL EVENTO</CardTitle>
+            <CardTitle className="text-2xl font-bold flex flex-row justify-evenly">
+              <ListCollapse className="h-8 w-8"/> DETALLES DEL EVENTO
+            </CardTitle>
           </CardHeader>
           <CardContent className="pt-6">
             <div className="space-y-4">
@@ -191,19 +199,6 @@ export default function NewspaperStyle() {
                     height="150"
                     loading="lazy"
                   />
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <Gift className="h-5 w-5 mr-2 mt-0.5" />
-                <div>
-                  <h3 className="font-bold">Mesa de regalo</h3>
-                  <p className="text-sm">Liverpool</p>
-                  <p>Número de Evento: 
-                    <Button onClick={handleCopyToClipboard} className="shadow-none bg-white text-black hover:bg-white">
-                      51625111 <Clipboard className="h-4" />
-                    </Button>
-                  </p>
                 </div>
               </div>
 
@@ -228,7 +223,9 @@ export default function NewspaperStyle() {
 
         <Card className="border-2 border-black">
           <CardHeader className="border-b border-black">
-            <CardTitle className="text-2xl font-bold">PROGRAMA</CardTitle>
+            <CardTitle className="text-2xl font-bold flex flex-row justify-evenly">
+              <CalendarCheck className="h-8 w-8"/> PROGRAMA
+            </CardTitle>
           </CardHeader>
           <CardContent className="pt-6">
             <div className="space-y-10 mt-[10%] h-full">
