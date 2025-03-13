@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
-import { MapPin, Gift, CalendarIcon, Send, Clipboard, SquareArrowOutUpRight, AlarmClock, ListCollapse, CalendarCheck } from "lucide-react"
+import { MapPin, Gift, CalendarIcon, Send, Clipboard, SquareArrowOutUpRight, AlarmClock, ListCollapse, CalendarCheck, Baby } from "lucide-react"
 
 
 export default function NewspaperStyle() {
@@ -203,10 +203,20 @@ export default function NewspaperStyle() {
               </div>
 
               <div className="flex items-start">
+                <Baby className="flex-[0.05] h-5 w-5 mr-2 mt-0.5" />
+                <div className="flex-1">
+                  <h3 className="font-bold">Sin Niños</h3>
+                  <p className="text-justify">Queremos que este momento tan especial lo disfruten tanto cómo nosotros.</p>
+                  <p className="text-justify">Por eso, en esta ocación, hemos decidido que el evento sea sólo para mayores de edad.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start">
                 <Send className="h-5 w-5 mr-2 mt-0.5" />
                 <div>
                   <h3 className="font-bold">Confirmación</h3>
                   <p>Por favor, confirma tu asistencia</p>
+                  <p className="text-xs">El número es de nuestra planner</p>
                   <div className="flex flex-row justify-between">
                     <Button onClick={() => handleWhatsAppConfirmation(true)} className="mt-2 bg-black text-white hover:bg-gray-800">
                       Confirmo
@@ -234,14 +244,17 @@ export default function NewspaperStyle() {
                 <div>
                   <h3 className="font-bold">Misa</h3>
                   <p className="text-sm">
-                    <a
-                      href="https://maps.app.goo.gl/MzTWGVXWowrKb8jTA"
+                  <Button onClick={() => window.open('https://maps.app.goo.gl/MzTWGVXWowrKb8jTA')} className="bg-[#e1e1dd] -ml-4 text-black border-black rounded-sm hover:bg-[#d5d5cf]">
+                    Capilla de San Rafael <MapPin className="h-5 w-5 ml-1 mt-0.5" />
+                  </Button>
+                    {/* <a
+                      href=""
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center"
                     >
-                      Capilla de San Rafael <MapPin className="h-5 w-5 ml-1 mt-0.5" />
-                    </a>
+                      
+                    </a> */}
                   </p>
                 </div>
               </div>
@@ -287,7 +300,7 @@ export default function NewspaperStyle() {
       </div>
 
       <div className="mt-8 text-center">
-        <p className="italic">{'"Dos almas con un solo pensamiento, dos corazones que laten como uno."'}</p>
+        <p className="italic">{'"Su presencia es muy importante para nosotros, por favor confirmanos tu asistencia por WhatsApp en los botones que están arriba. La fecha límite de confirmación es el 18 de marzo, de lo contrario daremos por hecho que no podrás asistir."'}</p>
         <p className="mt-4">¡Esperamos celebrar contigo!</p>
       </div>
     </div>
