@@ -244,9 +244,10 @@ export default function NewspaperStyle() {
                 <div>
                   <h3 className="font-bold">Misa</h3>
                   <p className="text-sm">
-                  <Button onClick={() => window.open('https://maps.app.goo.gl/MzTWGVXWowrKb8jTA')} className="bg-[#e1e1dd] -ml-4 text-black border-black rounded-sm hover:bg-[#d5d5cf]">
-                    Capilla de San Rafael <MapPin className="h-5 w-5 ml-1 mt-0.5" />
-                  </Button>
+                  {/* <Button onClick={() => window.open('https://maps.app.goo.gl/MzTWGVXWowrKb8jTA')} className="bg-[#e1e1dd] -ml-4 text-black border-black rounded-sm hover:bg-[#d5d5cf]"> */}
+                    Capilla de San Rafael 
+                    {/* <MapPin className="h-5 w-5 ml-1 mt-0.5" /> */}
+                  {/* </Button> */}
                     {/* <a
                       href=""
                       target="_blank"
@@ -256,6 +257,11 @@ export default function NewspaperStyle() {
                       
                     </a> */}
                   </p>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.233167351776!2d-92.95158472515654!3d18.01437948444121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85edd7e567f9c7d5%3A0x49aafe8ef5e3af1!2sCapilla%20San%20Rafael%20Arc%C3%A1ngel!5e0!3m2!1ses-419!2smx!4v1741829927439!5m2!1ses-419!2smx"
+                    width="250"
+                    height="150"
+                    loading="lazy"
+                  />
                 </div>
               </div>
               <Separator className="bg-black" />
