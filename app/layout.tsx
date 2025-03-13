@@ -28,6 +28,7 @@ export default function RootLayout({
       <body
         className={`dotted-background ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <link rel="canonical" href="https://www.boda-mehyli-y-miguel.com/" />
         {children}
       </body>
     </html>
