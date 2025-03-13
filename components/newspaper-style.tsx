@@ -80,7 +80,7 @@ export default function NewspaperStyle() {
             </CardHeader>
             <CardContent className="pt-6 md:pb-16 text-justify">
               <div className="aspect-video relative mb-6">
-                <img src="/img/_MG_6385.jpg?height=400&width=600" alt="Mehyli & Miguel" className="object-cover" />
+                <img src="/img/portada.jpg?height=400&width=600" alt="Mehyli & Miguel" className="object-cover" />
               </div>
               <div className="text-lg italic text-center my-10">
                 <q>Ahora, Señor, no he buscado placer al casarme con esta mujer, lo hago con un corazón sincero. Ten piedad de ella y de mí y llévamos juntos a la vejez</q>
@@ -180,6 +180,10 @@ export default function NewspaperStyle() {
         </div>
       </div>
 
+      <div className="relative my-6 md:mx-6">
+        <img src="/img/section.jpg?height=400&width=600" alt="Mehyli & Miguel" className="object-cover rounded-xl" />
+      </div>
+      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         <Card className="border-2 border-black">
           <CardHeader className="border-b border-black">
@@ -305,8 +309,12 @@ export default function NewspaperStyle() {
         </Card>
       </div>
 
+      <div className="relative my-6 md:mx-6">
+        <img src="/img/footer.jpg?height=400&width=600" alt="Mehyli & Miguel" className="object-cover rounded-xl" />
+      </div>
+
       <div className="mt-8 text-center">
-        <p>{'Su presencia es muy importante para nosotros, por favor confirmanos tu asistencia por WhatsApp en los botones que están arriba. La fecha límite de confirmación es el 18 de marzo, de lo contrario daremos por hecho que no podrás asistir.'}</p>
+        <p>{'Su presencia es muy importante para nosotros, por favor confirmanos tu asistencia por WhatsApp en los botones que están arriba. La fecha límite de confirmación es el '}<span className="font-extrabold">{'21 de marzo'}</span>{', de lo contrario daremos por hecho que no podrás asistir.'}</p>
         <p className="mt-4">¡Esperamos celebrar contigo!</p>
       </div>
     </div>
