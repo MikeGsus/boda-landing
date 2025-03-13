@@ -97,13 +97,13 @@ export default function NewspaperStyle() {
         </div>
 
         <div>
-          <Card className="border-2 border-black mb-6">
+          <Card className="border-2 border-black mb-4">
             <CardHeader className="border-b border-black">
               <CardTitle className="text-2xl font-bold flex flex-row justify-evenly">
                 <AlarmClock className="h-8 w-8" />Cuenta Regresiva
               </CardTitle>
             </CardHeader>
-            <CardContent className="pt-6">
+            <CardContent className="pt-4">
               <div className="grid grid-cols-4 gap-2 text-center">
                 <div>
                   <div className="text-3xl font-bold">{days}</div>
@@ -125,13 +125,13 @@ export default function NewspaperStyle() {
             </CardContent>
           </Card>
 
-          <Card className="border-2 border-black mb-6">
+          <Card className="border-2 border-black mb-4">
             <CardHeader className="border-b border-black">
               <CardTitle className="text-2xl font-bold flex flex-row justify-evenly">
               <CalendarIcon className="h-8 w-8"/>  SAVE THE DATE
               </CardTitle>
             </CardHeader>
-            <CardContent className="pt-6">
+            <CardContent className="pt-4">
             <div className="text-3xl font-bold text-center md:hidden lg:block">05/Abril/2025</div>
             <div className="text-3xl font-bold text-center hidden md:flex md:flex-col lg:hidden">
               <span className="border-b-[1px] border-black mb-2 pb-2">05</span>
@@ -149,7 +149,7 @@ export default function NewspaperStyle() {
               <CardTitle className="text-2xl font-bold flex flex-row justify-evenly">
                 <Gift className="h-8 w-8"/> MESA DE REGALOS
               </CardTitle>
-              <CardDescription className="text-center text-sm text-black">Su presencia es el mejor presente. Sin embargo, hemos elegido estás opciones de regalo que nos gustaría recibir.</CardDescription>
+              <CardDescription className="text-center text-[0.80rem] text-black">Su presencia es el mejor presente. Sin embargo, hemos elegido estás opciones de regalo que nos gustaría recibir.</CardDescription>
             </CardHeader>
             <CardContent className="pt-4">
             <p className="text-xl font-bold">Liverpool</p>
@@ -162,15 +162,15 @@ export default function NewspaperStyle() {
               </Button>
             </p>
             <p className="text-xl font-bold mt-2">Amazon</p>
-            <p>Enlace:
+            <p>
               <Button onClick={() => window.open('https://www.amazon.com.mx/wedding/registry/36O9G85OIP5FN')} className="bg-[#e1e1dd] ml-1 text-black border-black rounded-sm hover:bg-[#d5d5cf]">
                 Presione aquí <SquareArrowOutUpRight className="h-4" />
               </Button>
             </p>
             <p className="text-xl font-bold mt-2">Cuenta para depositos</p>
             <p>
-              BBVA <br />
-              <Button onClick={() => handleCopyToClipboard('4152313871712480')} className="bg-[#e1e1dd] text-black border-black rounded-sm hover:bg-[#d5d5cf]">
+              BBVA
+              <Button onClick={() => handleCopyToClipboard('4152313871712480')} className="bg-[#e1e1dd] text-black border-black rounded-sm ml-1 hover:bg-[#d5d5cf]">
                 4152 3138 7171 2480 <Clipboard className="h-4" />
               </Button>
               Cinthia Mehyli Ortiz Morales

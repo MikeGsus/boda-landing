@@ -73,5 +73,10 @@
   body {
     @apply bg-background text-foreground;
   }
+  .dotted-background {
+    background-image: radial-gradient(circle, #000 0.1px, transparent 0.4px);
+    background-size: 10px 10px; /* Adjust the size for the desired dot spacing */
+    background-color: #E1E1DD; /* Match the existing background color */
+  }
 }
 
