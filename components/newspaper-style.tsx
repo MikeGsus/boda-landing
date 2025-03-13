@@ -97,7 +97,7 @@ export default function NewspaperStyle() {
         </div>
 
         <div>
-          <Card className="border-2 border-black mb-4">
+          <Card className="border-2 border-black mb-4 bg-[#b4b4b0]">
             <CardHeader className="border-b border-black">
               <CardTitle className="text-2xl font-bold flex flex-row justify-evenly">
                 <AlarmClock className="h-8 w-8" />Cuenta Regresiva
@@ -125,7 +125,7 @@ export default function NewspaperStyle() {
             </CardContent>
           </Card>
 
-          <Card className="border-2 border-black mb-4 bg-[#9d9d9a]">
+          <Card className="border-2 border-black mb-4">
             <CardHeader className="border-b border-black">
               <CardTitle className="text-2xl font-bold flex flex-row justify-evenly">
               <CalendarIcon className="h-8 w-8"/>  SAVE THE DATE
@@ -231,7 +231,7 @@ export default function NewspaperStyle() {
           </CardContent>
         </Card>
 
-        <Card className="border-2 border-black">
+        <Card className="border-2 border-black bg-[#b4b4b0]">
           <CardHeader className="border-b border-black">
             <CardTitle className="text-2xl font-bold flex flex-row justify-evenly">
               <CalendarCheck className="h-8 w-8"/> PROGRAMA
