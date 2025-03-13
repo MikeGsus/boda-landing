@@ -125,7 +125,7 @@ export default function NewspaperStyle() {
             </CardContent>
           </Card>
 
-          <Card className="border-2 border-black mb-4">
+          <Card className="border-2 border-black mb-4 bg-[#9d9d9a]">
             <CardHeader className="border-b border-black">
               <CardTitle className="text-2xl font-bold flex flex-row justify-evenly">
               <CalendarIcon className="h-8 w-8"/>  SAVE THE DATE
@@ -144,7 +144,7 @@ export default function NewspaperStyle() {
             </CardContent>
           </Card>
           
-          <Card className="border-2 border-black">
+          <Card className="border-2 border-black bg-[#b4b4b0]">
             <CardHeader className="border-b border-black">
               <CardTitle className="text-2xl font-bold flex flex-row justify-evenly">
                 <Gift className="h-8 w-8"/> MESA DE REGALOS
@@ -154,23 +154,23 @@ export default function NewspaperStyle() {
             <CardContent className="pt-4">
             <p className="text-xl font-bold">Liverpool</p>
             <p>Número de Evento: 
-              <Button onClick={() => window.open('https://mesaderegalos.liverpool.com.mx/milistaderegalos/51625111')} className="bg-[#e1e1dd] ml-1 text-black border-black rounded-sm hover:bg-[#d5d5cf]">
+              <Button onClick={() => window.open('https://mesaderegalos.liverpool.com.mx/milistaderegalos/51625111')} className="bg-[#b4b4b0] ml-1 text-black border-black rounded-sm hover:bg-[#d5d5cf]">
                 51625111 <SquareArrowOutUpRight className="h-4" />
               </Button>
-              <Button onClick={() => handleCopyToClipboard('51625111')} className="bg-[#e1e1dd] text-black border-black rounded-sm hover:bg-[#d5d5cf]">
+              <Button onClick={() => handleCopyToClipboard('51625111')} className="bg-[#b4b4b0] text-black border-black rounded-sm hover:bg-[#d5d5cf]">
                 Copiar <Clipboard className="h-4" />
               </Button>
             </p>
             <p className="text-xl font-bold mt-2">Amazon</p>
             <p>
-              <Button onClick={() => window.open('https://www.amazon.com.mx/wedding/registry/36O9G85OIP5FN')} className="bg-[#e1e1dd] ml-1 text-black border-black rounded-sm hover:bg-[#d5d5cf]">
+              <Button onClick={() => window.open('https://www.amazon.com.mx/wedding/registry/36O9G85OIP5FN')} className="bg-[#b4b4b0] ml-1 text-black border-black rounded-sm hover:bg-[#d5d5cf]">
                 Presione aquí <SquareArrowOutUpRight className="h-4" />
               </Button>
             </p>
             <p className="text-xl font-bold mt-2">Cuenta para depositos</p>
             <p>
               BBVA
-              <Button onClick={() => handleCopyToClipboard('4152313871712480')} className="bg-[#e1e1dd] text-black border-black rounded-sm ml-1 hover:bg-[#d5d5cf]">
+              <Button onClick={() => handleCopyToClipboard('4152313871712480')} className="bg-[#b4b4b0] text-black border-black rounded-sm ml-1 hover:bg-[#d5d5cf]">
                 4152 3138 7171 2480 <Clipboard className="h-4" />
               </Button>
               Cinthia Mehyli Ortiz Morales
