@@ -306,7 +306,7 @@ export default function NewspaperStyle() {
       </div>
 
       <div className="mt-8 text-center">
-        <p className="italic">{'"Su presencia es muy importante para nosotros, por favor confirmanos tu asistencia por WhatsApp en los botones que están arriba. La fecha límite de confirmación es el 18 de marzo, de lo contrario daremos por hecho que no podrás asistir."'}</p>
+        <p>{'Su presencia es muy importante para nosotros, por favor confirmanos tu asistencia por WhatsApp en los botones que están arriba. La fecha límite de confirmación es el 18 de marzo, de lo contrario daremos por hecho que no podrás asistir.'}</p>
         <p className="mt-4">¡Esperamos celebrar contigo!</p>
       </div>
     </div>
