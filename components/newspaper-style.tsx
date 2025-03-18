@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { MapPin, Gift, CalendarIcon, Send, Clipboard, SquareArrowOutUpRight, AlarmClock, ListCollapse, CalendarCheck, Baby } from "lucide-react"
-
+import DressCode from "./ui/dressCode"
 
 export default function NewspaperStyle() {
   const [days, setDays] = useState(0)
@@ -207,6 +207,15 @@ export default function NewspaperStyle() {
               </div>
 
               <div className="flex items-start">
+                <DressCode />
+                <div className="flex-1">
+                  <h3 className="font-bold">Código de Vestimenta</h3>
+                  <p className="text-justify">Para nosotros lo más importante es que estés cómodo, pero nos gustaría que la vestimenta fuera formal.</p>
+                  <p className="text-justify">Dejemos los colores claros a la novia.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
                 <Baby className="flex-[0.05] h-5 w-5 mr-2 mt-0.5" />
                 <div className="flex-1">
                   <h3 className="font-bold">Sin Niños</h3>
@@ -314,7 +323,7 @@ export default function NewspaperStyle() {
       </div>
 
       <div className="mt-8 text-center">
-        <p>{'Su presencia es muy importante para nosotros, por favor confirmanos tu asistencia por WhatsApp en los botones que están arriba. La fecha límite de confirmación es el '}<span className="font-extrabold">{'21 de marzo'}</span>{', de lo contrario daremos por hecho que no podrás asistir.'}</p>
+        <p>{'Su presencia es muy importante para nosotros, por favor confirmanos tu asistencia por WhatsApp en los botones que están arriba. La fecha límite de confirmación es el '}<span className="font-extrabold">{'22 de marzo'}</span>{', de lo contrario daremos por hecho que no podrás asistir.'}</p>
         <p className="mt-4">¡Esperamos celebrar contigo!</p>
       </div>
     </div>
